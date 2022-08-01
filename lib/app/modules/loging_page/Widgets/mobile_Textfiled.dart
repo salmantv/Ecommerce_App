@@ -10,10 +10,12 @@ class MobileNumberTextfild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 40.w),
+      padding: EdgeInsets.symmetric(horizontal: 40.h),
       child: TextFormField(
         controller: textController,
         decoration: InputDecoration(
+          focusedBorder:
+              OutlineInputBorder(borderSide: BorderSide(color: Colors.white70)),
           hintText:
               comingemailid == false ? "Enter Mobile Number" : "Enter Email ID",
           hintStyle: TextStyle(fontSize: 15.sp),

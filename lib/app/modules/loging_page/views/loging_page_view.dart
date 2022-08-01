@@ -1,9 +1,8 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:showman/app/modules/loging_page/Widgets/Mobile_Textfiled.dart';
+import 'package:showman/app/modules/loging_page/Widgets/continue_button.dart';
 import 'package:showman/app/modules/loging_page/Widgets/icon_button.dart';
 
 import '../controllers/loging_page_controller.dart';
@@ -76,25 +75,7 @@ class LogingPageView extends GetView<LogingPageController> {
                     SizedBox(
                       height: 33.5.h,
                     ),
-                    InkWell(
-                      onTap: () => log(mobileText.text),
-                      child: Container(
-                        width: 240.w,
-                        height: 43.5.h,
-                        decoration: BoxDecoration(
-                            color: Colors.black87,
-                            borderRadius: BorderRadius.circular(8.r)),
-                        child: Center(
-                          child: Text(
-                            "Continue",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ),
-                    ),
+                    ContinueButton(),
                     Expanded(
                       flex: 2,
                       child: InkWell(
