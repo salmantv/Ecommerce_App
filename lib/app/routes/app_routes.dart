@@ -8,6 +8,7 @@ abstract class Routes {
   static const LOGING_PAGE = _Paths.LOGING_PAGE;
   static const ENTER_OTP_PAGE = _Paths.ENTER_OTP_PAGE;
   static const OTP_VERIFY_SCREEN = _Paths.OTP_VERIFY_SCREEN;
+  static const BOTTOM_NAVIGATION_BAR = _Paths.BOTTOM_NAVIGATION_BAR;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const LOGING_PAGE = '/loging-page';
   static const ENTER_OTP_PAGE = '/enter-otp-page';
   static const OTP_VERIFY_SCREEN = '/otp-verify-screen';
+  static const BOTTOM_NAVIGATION_BAR = '/bottom-navigation-bar';
 }
