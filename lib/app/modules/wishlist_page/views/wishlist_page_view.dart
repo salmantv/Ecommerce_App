@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
+import 'package:showman/app/modules/wishlist_page/views/widgets/favorite.dart';
 
+import '../../home/views/widgets/home_prodect_card.dart';
 import '../controllers/wishlist_page_controller.dart';
 
 class WishlistPageView extends GetView<WishlistPageController> {
@@ -23,79 +25,19 @@ class WishlistPageView extends GetView<WishlistPageController> {
         ),
         body: SafeArea(
             child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                width: 190.w,
-                height: 320.h,
-                child: Card(
-                  elevation: 10,
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 190.w,
-                        height: 230.h,
-                        color: Colors.amber,
-                      ),
-                      Flexible(
-                          child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10.h),
-                        child: Container(
-                          width: 190.w,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                "Leatherkraft",
-                                style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 13.sp,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              Text(
-                                "\$560.00 ",
-                                style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 13.sp,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Add To Cart",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.normal,
-                                        color: Colors.grey,
-                                        fontSize: 13.sp,
-                                      ),
-                                    ),
-                                  ),
-                                  IconButton(
-                                    onPressed: () {},
-                                    icon: Icon(Icons.delete_rounded),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ))
-                    ],
-                  ),
-                ),
-              )
-            ],
-          ),
-        )));
+                physics: BouncingScrollPhysics(),
+                child: GridView.builder(
+                  physics: ClampingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 4,
+                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 180.h,
+                      childAspectRatio: 1 / 1.6.r,
+                      crossAxisSpacing: 0,
+                      mainAxisSpacing: 2),
+                  itemBuilder: (context, index) {
+                    return FavoriteCard();
+                  },
+                ))));
   }
 }

@@ -10,7 +10,7 @@ dependencies:
   flutter_screenutil: ^5.5.3+2
   pinput: ^2.2.11
   carousel_slider: ^4.1.1
-  blobs: ^2.0.0
+  flutter_staggered_grid_view: ^0.6.2
 
   get: 4.6.5
   flutter: 
