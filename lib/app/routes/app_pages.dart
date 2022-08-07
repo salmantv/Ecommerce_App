@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import 'package:showman/app/modules/bottomNavigationBar/bindings/bottom_navigation_bar_binding.dart';
 import 'package:showman/app/modules/bottomNavigationBar/views/bottom_navigation_bar_view.dart';
+import 'package:showman/app/modules/wishlist_page/bindings/wishlist_page_binding.dart';
+import 'package:showman/app/modules/wishlist_page/views/wishlist_page_view.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -13,7 +15,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGING_PAGE;
+  static const INITIAL = Routes.BOTTOM_NAVIGATION_BAR;
 
   static final routes = [
     GetPage(
@@ -30,6 +32,11 @@ class AppPages {
       name: _Paths.BOTTOM_NAVIGATION_BAR,
       page: () => BottomNavigationBarView(),
       binding: BottomNavigationBarBinding(),
+    ),
+    GetPage(
+      name: _Paths.WISHLIST_PAGE,
+      page: () => WishlistPageView(),
+      binding: WishlistPageBinding(),
     ),
   ];
 }

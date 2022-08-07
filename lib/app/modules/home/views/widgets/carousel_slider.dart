@@ -8,7 +8,9 @@ class Carousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 20.h),
+      padding: EdgeInsets.only(
+        top: 20.h,
+      ),
       child: Container(
           child: CarouselSlider(
               items: [
@@ -23,15 +25,13 @@ class Carousel extends StatelessWidget {
               options: CarouselOptions(
                 height: 200.h,
                 aspectRatio: 16 / 9,
-                viewportFraction: 0.8,
+                viewportFraction: 1,
                 initialPage: 0,
                 enableInfiniteScroll: true,
-                reverse: false,
                 autoPlay: true,
-                autoPlayInterval: Duration(seconds: 3),
+                autoPlayInterval: Duration(seconds: 4),
                 autoPlayAnimationDuration: Duration(milliseconds: 800),
-                autoPlayCurve: Curves.fastOutSlowIn,
-                enlargeCenterPage: true,
+                autoPlayCurve: Curves.easeInCubic,
                 scrollDirection: Axis.horizontal,
               ))),
     );

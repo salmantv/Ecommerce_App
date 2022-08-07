@@ -10,6 +10,7 @@ class Serchbutoon extends StatelessWidget {
       child: Row(
         children: [
           Flexible(
+            flex: 4,
             child: Container(
                 height: 50.h,
                 color: Color(0xfff8f8f8),
