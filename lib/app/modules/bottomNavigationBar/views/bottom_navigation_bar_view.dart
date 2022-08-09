@@ -34,19 +34,19 @@ class BottomNavigationBarView extends GetView<BottomNavigationBarController> {
                     MyIcons.heart_empty,
                     size: 25.sp,
                   ),
-                  label: "Feverot"),
+                  label: "Favorite"),
               BottomNavigationBarItem(
                   icon: Icon(
                     MyIcons.user,
                     size: 25.sp,
                   ),
-                  label: "App"),
+                  label: "Profile"),
               BottomNavigationBarItem(
                   icon: Icon(
                     Icons.shopping_bag_outlined,
                     size: 25.sp,
                   ),
-                  label: "Profile"),
+                  label: "Cart"),
             ]);
       }),
       body: Obx(

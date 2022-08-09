@@ -10,6 +10,9 @@ abstract class Routes {
   static const OTP_VERIFY_SCREEN = _Paths.OTP_VERIFY_SCREEN;
   static const BOTTOM_NAVIGATION_BAR = _Paths.BOTTOM_NAVIGATION_BAR;
   static const WISHLIST_PAGE = _Paths.WISHLIST_PAGE;
+  static const PRODECT_VIEWPAGE = _Paths.PRODECT_VIEWPAGE;
+  static const CONST = _Paths.CONST;
+  static const CART_PAGE = _Paths.CART_PAGE;
 }
 
 abstract class _Paths {
@@ -19,4 +22,7 @@ abstract class _Paths {
   static const OTP_VERIFY_SCREEN = '/otp-verify-screen';
   static const BOTTOM_NAVIGATION_BAR = '/bottom-navigation-bar';
   static const WISHLIST_PAGE = '/wishlist-page';
+  static const PRODECT_VIEWPAGE = '/prodect-viewpage';
+  static const CONST = '/const';
+  static const CART_PAGE = '/cart-page';
 }

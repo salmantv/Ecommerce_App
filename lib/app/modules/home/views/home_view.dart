@@ -1,29 +1,60 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:showman/app/modules/home/views/widgets/carousel_slider.dart';
 import 'package:showman/app/modules/home/views/widgets/circel_catgory.dart';
 import 'package:showman/app/modules/home/views/widgets/gendar_widget.dart';
 import 'package:showman/app/modules/home/views/widgets/home_prodect_card.dart';
 import 'package:showman/app/modules/home/views/widgets/my_flutter_app_icons.dart';
 import 'package:showman/app/modules/home/views/widgets/search_button.dart';
+import 'package:showman/app/modules/prodect_viewpage/views/prodect_viewpage_view.dart';
 import '../controllers/home_controller.dart';
+import '../controllers/serchLogic.dart';
 
 class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Drawer(),
         drawerScrimColor: Colors.black45,
         appBar: AppBar(
-          toolbarHeight: 60.h,
-          centerTitle: true,
-          title: Icon(
-            MyFlutterApp.logo,
-            size: 28.h,
-            color: Colors.black,
-          ),
+          toolbarHeight: 140.h,
+          title: GestureDetector(
+              onTap: () {
+                showSearch(context: context, delegate: CustomSearchDelegate());
+              },
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              PageTransition(
+                                  duration: Duration(milliseconds: 500),
+                                  type: PageTransitionType.leftToRight,
+                                  child: ProdectViewpageView()));
+                        },
+                        icon: Icon(
+                          Icons.menu,
+                          color: Colors.black,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 90.w,
+                      ),
+                      Icon(MyFlutterApp.logo, color: Colors.black, size: 30.sp),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  Serchbutoon(),
+                ],
+              )),
           elevation: 0,
           backgroundColor: Colors.white24,
         ),
@@ -39,8 +70,8 @@ class HomeView extends GetView<HomeController> {
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   children: [
-                    Serchbutoon(),
-                    Carousel(carouselimage: ""),
+                    Carousel(
+                        where: false, carouselimage: "assets/images/Post3.png"),
                     Container(
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,

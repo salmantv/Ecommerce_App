@@ -2,6 +2,10 @@ import 'package:get/get.dart';
 
 import 'package:showman/app/modules/bottomNavigationBar/bindings/bottom_navigation_bar_binding.dart';
 import 'package:showman/app/modules/bottomNavigationBar/views/bottom_navigation_bar_view.dart';
+import 'package:showman/app/modules/cart_page/bindings/cart_page_binding.dart';
+import 'package:showman/app/modules/cart_page/views/cart_page_view.dart';
+import 'package:showman/app/modules/prodect_viewpage/bindings/prodect_viewpage_binding.dart';
+import 'package:showman/app/modules/prodect_viewpage/views/prodect_viewpage_view.dart';
 import 'package:showman/app/modules/wishlist_page/bindings/wishlist_page_binding.dart';
 import 'package:showman/app/modules/wishlist_page/views/wishlist_page_view.dart';
 
@@ -37,6 +41,16 @@ class AppPages {
       name: _Paths.WISHLIST_PAGE,
       page: () => WishlistPageView(),
       binding: WishlistPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.PRODECT_VIEWPAGE,
+      page: () => ProdectViewpageView(),
+      binding: ProdectViewpageBinding(),
+    ),
+    GetPage(
+      name: _Paths.CART_PAGE,
+      page: () => CartPageView(),
+      binding: CartPageBinding(),
     ),
   ];
 }

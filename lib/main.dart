@@ -14,7 +14,14 @@ void main() {
       builder: (BuildContext context, Widget? child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
+          theme: ThemeData.from(
+            colorScheme: const ColorScheme.light(),
+          ).copyWith(
+              pageTransitionsTheme: const PageTransitionsTheme(
+                builders: <TargetPlatform, PageTransitionsBuilder>{
+                  TargetPlatform.android: ZoomPageTransitionsBuilder(),
+                },
+              ),
               backgroundColor: Colors.white.withOpacity(0.6),
               primaryColor: Colors.blue),
           initialRoute: AppPages.INITIAL,
