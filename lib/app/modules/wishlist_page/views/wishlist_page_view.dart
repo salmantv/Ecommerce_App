@@ -36,25 +36,19 @@ class WishlistPageView extends GetView<WishlistPageController> {
                               fontWeight: FontWeight.bold,
                               color: Colors.black),
                         ),
-                        Container(
-                          width: 100.h,
-                          height: 30.h,
-                          child: ElevatedButton(
-                              onPressed: () {}, child: Text("Remove all")),
-                        )
                       ],
                     ),
                   ),
                   SizedBox(height: 10.h),
                   GridView.builder(
-                    physics: ClampingScrollPhysics(),
+                    physics: BouncingScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: 4,
                     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                        maxCrossAxisExtent: 190.w,
-                        childAspectRatio: 1 / 1.9,
+                        maxCrossAxisExtent: 180.w,
+                        childAspectRatio: 1 / 1.8,
                         crossAxisSpacing: 0,
-                        mainAxisSpacing: 2),
+                        mainAxisSpacing: 10),
                     itemBuilder: (context, index) {
                       return FavoriteCard();
                     },

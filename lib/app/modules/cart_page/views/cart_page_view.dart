@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:showman/app/modules/cart_page/views/widgtes/bottomPayBar.dart';
 import 'package:showman/app/modules/cart_page/views/widgtes/cart_card.dart';
+import 'package:showman/app/modules/wishlist_page/views/wishlist_page_view.dart';
 import '../controllers/cart_page_controller.dart';
 
 class CartPageView extends GetView<CartPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Buttomwidgetforcart(),
       appBar: AppBar(
         toolbarHeight: 60.h,
         elevation: 0,
@@ -18,7 +21,9 @@ class CartPageView extends GetView<CartPageController> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(WishlistPageView());
+            },
             icon: Icon(
               Icons.favorite_border_outlined,
               color: Colors.black,
@@ -27,7 +32,8 @@ class CartPageView extends GetView<CartPageController> {
         ],
       ),
       body: ListView.builder(
-        itemCount: 1,
+        physics: ClampingScrollPhysics(),
+        itemCount: 10,
         itemBuilder: (context, index) {
           return Cartcard();
         },

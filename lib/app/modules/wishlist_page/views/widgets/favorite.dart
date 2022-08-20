@@ -18,9 +18,10 @@ class FavoriteCard extends StatelessWidget {
               onTap: () => Navigator.push(
                 context,
                 PageTransition(
-                    duration: Duration(milliseconds: 800),
-                    type: PageTransitionType.fade,
-                    child: ProdectViewpageView()),
+                  duration: Duration(milliseconds: 400),
+                  type: PageTransitionType.bottomToTop,
+                  child: ProdectViewpageView(),
+                ),
               ),
               child: Card(
                 elevation: 6,
@@ -31,9 +32,11 @@ class FavoriteCard extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(4.r),
                         child: Container(
+                          height: 200.h,
                           child: Image.network(
                             "https://images.unsplash.com/photo-1617922001439-4a2e6562f328?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29tZW4lMjBmYXNoaW9ufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
                             fit: BoxFit.cover,
+                            height: 170.r,
                           ),
                         ),
                       ),

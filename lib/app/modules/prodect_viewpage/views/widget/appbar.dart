@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:showman/app/modules/wishlist_page/views/wishlist_page_view.dart';
 
 List<Widget> Appbaricons = [
   IconButton(
@@ -9,7 +11,7 @@ List<Widget> Appbaricons = [
     ),
   ),
   IconButton(
-    onPressed: () {},
+    onPressed: () => Get.to(WishlistPageView()),
     icon: Icon(
       Icons.favorite_border_rounded,
       color: Colors.black,

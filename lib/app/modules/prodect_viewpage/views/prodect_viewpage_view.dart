@@ -1,13 +1,10 @@
-import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:showman/app/modules/prodect_viewpage/views/widget/appbar.dart';
 import 'package:showman/app/modules/prodect_viewpage/views/widget/buttomwidget.dart';
 import 'package:showman/app/modules/prodect_viewpage/views/widget/deliverywidget.dart';
 import 'package:showman/app/modules/prodect_viewpage/views/widget/prodectimage.dart';
-import 'package:showman/app/modules/prodect_viewpage/views/widget/sizewidget.dart';
 import '../../cart_page/views/widgtes/sizeselect_widget.dart';
 import '../controllers/prodect_viewpage_controller.dart';
 

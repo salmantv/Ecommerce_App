@@ -13,6 +13,9 @@ abstract class Routes {
   static const PRODECT_VIEWPAGE = _Paths.PRODECT_VIEWPAGE;
   static const CONST = _Paths.CONST;
   static const CART_PAGE = _Paths.CART_PAGE;
+  static const DRAWER_PAGE = _Paths.DRAWER_PAGE;
+  static const PROFILE_PAGE = _Paths.PROFILE_PAGE;
+  static const ORDER_CONFIRMATION = _Paths.ORDER_CONFIRMATION;
 }
 
 abstract class _Paths {
@@ -25,4 +28,7 @@ abstract class _Paths {
   static const PRODECT_VIEWPAGE = '/prodect-viewpage';
   static const CONST = '/const';
   static const CART_PAGE = '/cart-page';
+  static const DRAWER_PAGE = '/drawer-page';
+  static const PROFILE_PAGE = '/profile-page';
+  static const ORDER_CONFIRMATION = '/order-confirmation';
 }

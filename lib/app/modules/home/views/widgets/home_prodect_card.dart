@@ -13,7 +13,7 @@ class HomeCard extends StatelessWidget {
       child: Column(
         children: [
           Card(
-            elevation: 12,
+            elevation: 4,
             color: Colors.grey,
             child: Container(
                 width: 165.w,

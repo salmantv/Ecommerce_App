@@ -1,11 +1,17 @@
 import 'package:get/get.dart';
 
+import 'package:showman/app/modules/Order_confirmation/bindings/order_confirmation_binding.dart';
+import 'package:showman/app/modules/Order_confirmation/views/order_confirmation_view.dart';
 import 'package:showman/app/modules/bottomNavigationBar/bindings/bottom_navigation_bar_binding.dart';
 import 'package:showman/app/modules/bottomNavigationBar/views/bottom_navigation_bar_view.dart';
 import 'package:showman/app/modules/cart_page/bindings/cart_page_binding.dart';
 import 'package:showman/app/modules/cart_page/views/cart_page_view.dart';
+import 'package:showman/app/modules/drawer_page/bindings/drawer_page_binding.dart';
+import 'package:showman/app/modules/drawer_page/views/drawer_page_view.dart';
 import 'package:showman/app/modules/prodect_viewpage/bindings/prodect_viewpage_binding.dart';
 import 'package:showman/app/modules/prodect_viewpage/views/prodect_viewpage_view.dart';
+import 'package:showman/app/modules/profile_page/bindings/profile_page_binding.dart';
+import 'package:showman/app/modules/profile_page/views/profile_page_view.dart';
 import 'package:showman/app/modules/wishlist_page/bindings/wishlist_page_binding.dart';
 import 'package:showman/app/modules/wishlist_page/views/wishlist_page_view.dart';
 
@@ -51,6 +57,21 @@ class AppPages {
       name: _Paths.CART_PAGE,
       page: () => CartPageView(),
       binding: CartPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.DRAWER_PAGE,
+      page: () => DrawerPageView(),
+      binding: DrawerPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE_PAGE,
+      page: () => ProfilePageView(),
+      binding: ProfilePageBinding(),
+    ),
+    GetPage(
+      name: _Paths.ORDER_CONFIRMATION,
+      page: () => OrderConfirmationView(),
+      binding: OrderConfirmationBinding(),
     ),
   ];
 }

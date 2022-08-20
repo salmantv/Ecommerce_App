@@ -26,18 +26,18 @@ class BottomNavigationBarView extends GetView<BottomNavigationBarController> {
             iconSize: 25,
             items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home, size: 25.sp),
+                icon: Icon(Icons.home_outlined, size: 25.sp),
                 label: "Home",
               ),
               BottomNavigationBarItem(
                   icon: Icon(
                     MyIcons.heart_empty,
-                    size: 25.sp,
+                    size: 22.sp,
                   ),
                   label: "Favorite"),
               BottomNavigationBarItem(
                   icon: Icon(
-                    MyIcons.user,
+                    Icons.person_outline_rounded,
                     size: 25.sp,
                   ),
                   label: "Profile"),

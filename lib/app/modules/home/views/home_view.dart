@@ -9,7 +9,7 @@ import 'package:showman/app/modules/home/views/widgets/gendar_widget.dart';
 import 'package:showman/app/modules/home/views/widgets/home_prodect_card.dart';
 import 'package:showman/app/modules/home/views/widgets/my_flutter_app_icons.dart';
 import 'package:showman/app/modules/home/views/widgets/search_button.dart';
-import 'package:showman/app/modules/prodect_viewpage/views/prodect_viewpage_view.dart';
+import '../../drawer_page/views/drawer_page_view.dart';
 import '../controllers/home_controller.dart';
 import '../controllers/serchLogic.dart';
 
@@ -34,9 +34,9 @@ class HomeView extends GetView<HomeController> {
                           Navigator.push(
                               context,
                               PageTransition(
-                                  duration: Duration(milliseconds: 500),
+                                  duration: Duration(milliseconds: 400),
                                   type: PageTransitionType.leftToRight,
-                                  child: ProdectViewpageView()));
+                                  child: DrawerPageView()));
                         },
                         icon: Icon(
                           Icons.menu,
@@ -52,7 +52,7 @@ class HomeView extends GetView<HomeController> {
                   SizedBox(
                     height: 20.h,
                   ),
-                  Serchbutoon(),
+                  Searchbutoon(),
                 ],
               )),
           elevation: 0,

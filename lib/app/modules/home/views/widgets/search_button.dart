@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:showman/app/modules/home/controllers/serchLogic.dart';
 
-class Serchbutoon extends StatelessWidget {
-  const Serchbutoon({Key? key}) : super(key: key);
+class Searchbutoon extends StatelessWidget {
+  const Searchbutoon({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +13,7 @@ class Serchbutoon extends StatelessWidget {
               height: 50.h,
               color: Color(0xfff8f8f8),
               child: Card(
-                elevation: 12,
+                elevation: 6,
                 child: Container(
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(10)),
